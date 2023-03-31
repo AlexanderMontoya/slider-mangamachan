@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-DarkBlue: #202046;
+    --color-GrayishBlue: hsl(240, 18%, 77%);
+    --color-text: rgb(237, 226, 226);
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-DarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content__buttons{
+    position: absolute;
+    /* top: 320px;
+    width: 80px; */
+    top: 100px;
+    right: 100px;
+    width: 120px;
+    display: flex;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.547);
+    z-index: 3;
+}
+
+.nav__btn{
+    width: 50%;
+    padding: 16px 0px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 50% 0px 0px 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav__btn--next{
+    border-radius: 0px 50% 50% 0px;
+}
+
+.nav__btn img{
+    width: 15px;
+}
+
+.conteiner__mangas{
+    width: 75%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__manga{
+    width: 100%;
+    display: none;
+    opacity: 0;
+}
+
+.content__manga--view{
+    opacity: 1;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    animation: efecto_opacity 1s linear;
+}
+
+@keyframes efecto_opacity {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.content__synopsis{
+    width: 30%;
+    position: relative;
+    padding: 20px 0px;
+    z-index: 2;
+}
+
+.content__quotes{
+    width: 120px;
+    position: absolute;
+    top: -50px;
+    left: 90px;
+    z-index: 0;
+}
+
+.synopsis__paragraph{
+    width: 180%;
+    font-size: 30px;
+    color: var(--color-text);
+    font-weight: 300;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.name__autor{
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-GrayishBlue);
+}
+
+.synopsis__job{
+    color: var(--color-GrayishBlue);
+}
+
+.content__image{
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image__photo{
+    width: 75%;
+    position: absolute;
+}
+
+.image__bg{
+    width: 100%;
+    height: 100%;
+}
+
+.content__curve{
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width:2100px){
+    .conteiner__mangas{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:1025px){
+    .content__image{
+        width: 450px;
+    }
+    .content__quotes{
+        width: 60px;
+        top: -10px;
+    }
+
+    .synopsis__paragraph{
+        font-size: 20px;
+    }
+
+    .name__autor{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:859px){
+    .conteiner__mangas{
+        width: 90%;
+    }
+
+    .content__image{
+        width: 50%;
+    }
+
+    .synopsis__paragraph{
+        font-size: 18px;
+    }
+
+    .name__autor{
+        font-size: 14px;
+    }
+    .content__curve{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width:590px){
+    .content__manga{
+        flex-direction: column-reverse;
+    }
+    .content__buttons{
+        top: auto;
+        right: auto;
+    }
+
+    .content__synopsis{
+        width: 70%;
+    }
+
+    .synopsis__paragraph{
+        width: 100%;
+        text-align: center;
+    }
+
+    .name__autor{
+        text-align: center;
+    }
+
+    .content__image{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .content__quotes{
+        width: 50px;
+        left: calc(100% - 60%);
+    }
+}
+
+@media only screen and (max-width: 534px){
+    .content__buttons{
+        width: 90px;
+    }
+    .nav__btn{
+        padding: 12px 0px;
+    }
+
+    .nav__btn img{
+        width: 10px;
+    }
+
+    .synopsis__name{
+        width: 130px;
+        left: calc(100% - 70%);
+        position: absolute;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 376px){
+    .content__synopsis{
+        width: 90%;
+    }
+    .content__image{
+        width: 95%;
+        margin-bottom: 30px;
+    }
+    .synopsis__paragraph{
+        margin-bottom: 20px;
+    }
+}
