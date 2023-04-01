@@ -1,5 +1,5 @@
 # Slider ManGama-Chan
-"PokeMontoya" es un juego de memorizacion sobre cartas con la tematica de atrapar a todos los 151 pokemon de la region de Kanto, construido con la PokeAPI usando imagenes y estadisticas de cada pokemon, esperemos disfruta de este divertido y entretenido juego 😉
+Slider usando la API de mangamachan, un diseño sacado del [challenge de Frontend mentor](https://www.frontendmentor.io/solutions/bootcamp-testimonials-slider-master-vSuNL0OoM3) , dandole un estilo propio y usando una API de mangas.
 ## 💻 Demo
 ![Video Slider Mangamachan](/video/demo.gif)
 ## 🛠️ Construido con:
